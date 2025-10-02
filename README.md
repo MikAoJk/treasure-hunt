@@ -1,5 +1,5 @@
-# generalens-dilemma
-Simple implementation of "generalens dilemma" in kotlin
+# treasure-hunt
+Simple implementation of "treasure-hunt" in kotlin
 
 ## Technologies used
 * JDK 21
