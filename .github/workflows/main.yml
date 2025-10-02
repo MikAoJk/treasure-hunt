@@ -29,6 +29,6 @@ jobs:
             ${{ runner.os }}-gradle-wrapper-
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-      - name: Run
+      - name: Build
         run: |
-          ./gradlew run
+          ./gradlew clean build
