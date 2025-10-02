@@ -10,7 +10,7 @@ private var playerY = 0
 private var moves = 0
 private const val PLAYER_EMOJI = "\uD83D\uDC4B"
 
-fun init() {
+fun main() {
     treasureX = Random.nextInt(GRID_SIZE)
     treasureY = Random.nextInt(GRID_SIZE)
     playerX = GRID_SIZE / 2
