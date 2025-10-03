@@ -25,7 +25,7 @@ fun main() {
     playGame()
 }
 
-private fun playGame() {
+fun playGame() {
     while (true) {
         print("Enter your move: ")
         val move = readLine()?.trim()?.lowercase() ?: ""
@@ -44,7 +44,8 @@ private fun playGame() {
     }
 }
 
-private fun makeMove(direction: String): Boolean {
+
+fun makeMove(direction: String): Boolean {
     return when (direction) {
         "north", "n" -> {
             if (playerY > 0) {
@@ -74,7 +75,7 @@ private fun makeMove(direction: String): Boolean {
     }
 }
 
-private fun displayGrid() {
+fun displayGrid() {
     println("\nCurrent Grid:")
     for (y in 0 until GRID_SIZE) {
         for (x in 0 until GRID_SIZE) {
@@ -89,7 +90,7 @@ private fun displayGrid() {
     println()
 }
 
-private fun giveHint() {
+fun giveHint() {
     val distance = kotlin.math.abs(playerX - treasureX) + kotlin.math.abs(playerY - treasureY)
     when (distance) {
         1, 2 -> println("🔥 Great! You're getting closer!")
