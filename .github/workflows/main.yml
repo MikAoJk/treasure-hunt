@@ -13,7 +13,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          cache: "gradle"
+          cache: 'gradle'
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Build
