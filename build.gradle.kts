@@ -21,5 +21,3 @@ application {
 repositories {
     mavenCentral()
 }
-
-}
