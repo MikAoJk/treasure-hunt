@@ -16,13 +16,4 @@ java -version
 ```
 
 ### Running the application locally
-
-#### Run with gradle
-To run the application, you can simply use this gradle command
-``` bash
-./gradlew run
-```
-or on windows `gradlew.bat run`
-
-### Run in your favoritt IDE(Intellij)
 Go to src/main/kotlin/io/github/mikaojk/Main.kt and run the main method
