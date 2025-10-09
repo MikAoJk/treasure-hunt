@@ -1,7 +1,9 @@
 group = "io.github.mikaojk"
-version = "0.0.1"
+version = "1.0.0"
 
-val junitJupiterVersion = "5.12.1"
+val junitJupiterVersion = "6.0.0"
+
+val javaVersion = 21
 
 plugins {
     kotlin("jvm") version "2.2.20"
@@ -16,15 +18,15 @@ application {
     mainClass.set("io.github.mikaojk.MainKt")
 }
 
-
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(javaVersion)
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

@@ -1,14 +1,15 @@
 package io.github.mikaojk
 
+import kotlin.math.abs
 import kotlin.random.Random
 
-private const val GRID_SIZE = 5
-private var treasureX = 0
-private var treasureY = 0
-private var playerX = 0
-private var playerY = 0
-private var moves = 0
-private const val PLAYER_EMOJI = "\uD83D\uDC4B"
+const val GRID_SIZE = 5
+var treasureX = 0
+var treasureY = 0
+var playerX = 0
+var playerY = 0
+var moves = 0
+const val PLAYER_EMOJI = "\uD83D\uDC4B"
 
 fun main() {
     treasureX = Random.nextInt(GRID_SIZE)
@@ -28,7 +29,7 @@ fun main() {
 fun playGame() {
     while (true) {
         print("Enter your move: ")
-        val move = readLine()?.trim()?.lowercase() ?: ""
+        val move = readlnOrNull()?.trim()?.lowercase() ?: ""
         if (makeMove(move)) {
             moves++
             displayGrid()
@@ -53,24 +54,28 @@ fun makeMove(direction: String): Boolean {
                 true
             } else false
         }
+
         "south", "s" -> {
             if (playerY < GRID_SIZE - 1) {
                 playerY++
                 true
             } else false
         }
+
         "east", "e" -> {
             if (playerX < GRID_SIZE - 1) {
                 playerX++
                 true
             } else false
         }
+
         "west", "w" -> {
             if (playerX > 0) {
                 playerX--
                 true
             } else false
         }
+
         else -> false
     }
 }
@@ -91,7 +96,7 @@ fun displayGrid() {
 }
 
 fun giveHint() {
-    val distance = kotlin.math.abs(playerX - treasureX) + kotlin.math.abs(playerY - treasureY)
+    val distance = abs(playerX - treasureX) + abs(playerY - treasureY)
     when (distance) {
         1, 2 -> println("🔥 Great! You're getting closer!")
         3, 4 -> println("🌤️ Watch out! You're moving farther.")

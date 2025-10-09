@@ -1,5 +1,5 @@
 # treasure-hunt
-Simple implementation of "treasure-hunt" in kotlin
+Simple implementation of "treasure-hunt" in kotlin as a console game
 
 ## Technologies used
 * JDK 21
