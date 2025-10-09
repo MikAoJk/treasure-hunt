@@ -22,17 +22,4 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(libs.junit.jupiter)
-
-    testRuntimeOnly(libs.junit.jupiter.platform.launcher)
-}
-
-
-tasks.named<Test>("test") {
-    testLogging {
-        showStandardStreams = true
-        showStackTraces = true
-        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
-    }
 }
