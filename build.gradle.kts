@@ -27,3 +27,16 @@ dependencies {
    
     testRuntimeOnly(libs.junit.jupiter.engine)
 }
+
+tasks {
+    withType<Test> {
+        useJUnitPlatform {}
+        testLogging {
+            events("passed", "skipped", "failed")
+            showStandardStreams = true
+            showStackTraces = true
+            exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+        }
+    }
+
+}
