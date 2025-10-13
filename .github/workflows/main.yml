@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   run:
-    name: Checkout code and run
+    name: Checkout code and build
     runs-on: ubuntu-latest
     steps:
       - name: Setup java
